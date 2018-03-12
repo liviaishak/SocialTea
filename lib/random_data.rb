@@ -6,11 +6,11 @@ module RandomData
       sentences << random_sentence
     end
 
-    sentence.join(" ")
+    sentences.join(" ")
   end
 
   def self.random_sentence
-    string = []
+    strings = []
     rand(3..8).times do
       strings << random_word
     end
