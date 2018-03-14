@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
-<<<<<<< HEAD
     @posts.each_with_index do |post, index|
       if index % 5 == 0
         post.title = "SPAM"
@@ -13,7 +12,6 @@ class PostsController < ApplicationController
   end
 
   def new
-=======
   end
 
   def show
@@ -36,7 +34,6 @@ class PostsController < ApplicationController
       flash.now[:alert] = "There was an error saving the post. Please try again."
       render :new
     end
->>>>>>> cp16
   end
 
   def edit
