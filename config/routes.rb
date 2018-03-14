@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
 
   resources :posts
 
+=======
+  resources :posts
+
+>>>>>>> cp16
   get 'about' => 'welcome#about'
 
   root 'welcome#index'
