@@ -13,4 +13,15 @@ class User < ApplicationRecord
             length: { minimum: 3, maximum: 254 }
 
   has_secure_password
+
+  def full_name 
+    if name
+      result = []
+      name.split.each do |name_bloc|
+        result << name_bloc.capitalize
+      end
+      self.name = result.join(" ")
+    end
+  end
+
 end
