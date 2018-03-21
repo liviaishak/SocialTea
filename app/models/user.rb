@@ -14,14 +14,10 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  def full_name 
-    if name
-      result = []
-      name.split.each do |name_bloc|
-        result << name_bloc.capitalize
-      end
-      self.name = result.join(" ")
+  def full_name
+    if name.present?
+      self.name = name.split.map(&:capitalize).join(" ")
     end
-  end
+ end
 
 end
