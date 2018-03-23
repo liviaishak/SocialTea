@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-
+  has_many :posts, dependent: :destroy
   before_save { self.email = email.downcase if email.present? }
 
   validates :name, length: { minimum: 1, maximum: 100}, presence: true
@@ -13,4 +13,11 @@ class User < ApplicationRecord
             length: { minimum: 3, maximum: 254 }
 
   has_secure_password
+
+  def full_name
+    if name.present?
+      self.name = name.split.map(&:capitalize).join(" ")
+    end
+ end
+
 end
