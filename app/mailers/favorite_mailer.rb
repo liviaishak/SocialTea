@@ -1,5 +1,5 @@
 class FavoriteMailer < ApplicationMailer
-  default from: "youremail@email.com"
+  default from: "liviaishak1@gmail.com"
 
 
    def new_comment(user, post, comment)

@@ -57,6 +57,14 @@ end
    password: 'helloworld'
  )
 
+ # Create real test user
+  test_user = User.create!(
+    name:     'Livia Ishak',
+    email:    'liviaishak1@gmail.com',
+    password: 'helloworld',
+    role:     'admin'
+  )
+
 puts "Seed finished"
 puts "#{User.count} users created"
 puts "#{Topic.count} topics created"
