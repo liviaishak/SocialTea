@@ -1,4 +1,4 @@
- ## Bloccit
+ ## SocialTea
  
 Bloccit is a Reddit replica where members can share links, post comments or related information in response created with Ruby on Rails.
 
