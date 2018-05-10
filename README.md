@@ -1,6 +1,6 @@
  ## SocialTea
  
-Bloccit is a Reddit replica where members can share links, post comments or related information in response created with Ruby on Rails.
+SocialTea is a Reddit replica where members can share links, post comments or related information in response created with Ruby on Rails.
 
 ## Features:
 <p>Login Authentication</p>
