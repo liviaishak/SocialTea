@@ -14,8 +14,8 @@ users = User.all
 #Create Topics
 15.times do
   Topic.create!(
-    name: RandomData.random_sentence,
-    description: RandomData.random_paragraph
+    name: Faker::StarWars.quote,
+    description: Faker::StarWars.wookiee_sentence
   )
 end
   topics = Topic.all
@@ -25,8 +25,8 @@ end
   post = Post.create!(
     user: users.sample,
     topic: topics.sample,
-    title: RandomData.random_sentence,
-    body: RandomData.random_paragraph
+    title: Faker::StarWars.quote,
+    body: Faker::Lorem.paragraphs
   )
   post.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
   rand(1..5).times { post.votes.create!(value: [-1, 1].sample, user: users.sample) }
@@ -38,7 +38,7 @@ posts = Post.all
   Comment.create!(
     user: users.sample,
     post: posts.sample,
-    body: RandomData.random_paragraph
+    body: Faker::Lorem.paragraphs
   )
 end
 
